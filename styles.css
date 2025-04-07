@@ -1,17 +1,17 @@
-
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f6f5f7;
-    color: #333;
     margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f1e6;
+    color: #333;
 }
 
 header {
-    background-color: #ffe6f0;
+    background-color: #fff;
     padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -20,67 +20,73 @@ header {
     margin: auto;
 }
 
+.logo {
+    width: 60px;
+    vertical-align: middle;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
 }
 
-nav a {
+nav ul li a {
     text-decoration: none;
-    color: #555;
-    font-weight: bold;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-.intro, .about, .contact, .portfolio {
-    padding: 40px 0;
+nav ul li a:hover {
+    color: #6b4e16;
+}
+
+.intro, .about, .contact {
+    padding: 60px 0;
     text-align: center;
+}
+
+.portfolio {
+    padding: 60px 0;
 }
 
 .template-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
+    justify-content: center;
 }
 
 .template-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
-}
-
-.template-item img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+    transition: transform 0.3s ease;
 }
 
 .template-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.template-item img {
+    width: 100%;
+    height: auto;
 }
 
 footer {
-    background-color: #ffe6f0;
+    background-color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 40px;
+    font-size: 14px;
+    color: #999;
 }
